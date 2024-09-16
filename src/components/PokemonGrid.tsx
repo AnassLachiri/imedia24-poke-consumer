@@ -20,16 +20,14 @@ const PokemonGrid = () => {
     useEffect(() => {
         if(isFirstPage){
             setIsFirstPage(false);
-            setCurrentPage((prevPage) => prevPage + 1);
             dispatch(fetchPokemonData(currentPage))
         }
-
     }, []);
   
 
     const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
         const { scrollHeight, scrollTop, clientHeight } = e.currentTarget;
-        console.log("e.currentTarget : ", scrollHeight, scrollTop, clientHeight);
+        // console.log("e.currentTarget : ", scrollHeight, scrollTop, clientHeight);
 
         if (scrollHeight - scrollTop - clientHeight < 10 && !loading && !isFirstPage) {
             dispatch(fetchPokemonData(currentPage));
@@ -38,7 +36,7 @@ const PokemonGrid = () => {
     };
 
     const handlePokemonClick = (name: string, id: number) => {
-        console.log("name - number : ", name, " - ", id);
+        // console.log("name - number : ", name, " - ", id);
         setSelectedPokemon(name);
         handleOpen();
     }
