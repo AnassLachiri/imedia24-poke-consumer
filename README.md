@@ -1,6 +1,10 @@
-# React Vite App
+# Pokemon App
 
-This is a simple React application powered by Vite.
+This is a simple React application built with Vite that consumes the Pokémon API to display Pokémon data.
+
+![Main Page](./screenshots/main-page.png)  
+
+![Pokemon Card](./screenshots/pokemon-card.png)
 
 ## Getting Started
 
